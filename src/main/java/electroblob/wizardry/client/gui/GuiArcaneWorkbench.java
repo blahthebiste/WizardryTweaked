@@ -515,8 +515,14 @@ public class GuiArcaneWorkbench extends GuiContainer {
 	@Override
 	protected void keyTyped(char typedChar, int keyCode) throws IOException {
 
+        // Allow exiting the GUI by pressing the inventory button
+        if(keyCode == Minecraft.getMinecraft().gameSettings.keyBindInventory.getKeyCode()) {
+            mc.displayGuiScreen(null);
+            mc.setIngameFocus();
+        }
+
 		if(this.searchNeedsClearing){
-			this.searchNeedsClearing = false;
+            this.searchNeedsClearing = false;
 			this.searchField.setText("");
 		}
 
