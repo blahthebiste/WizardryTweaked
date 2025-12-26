@@ -2,7 +2,21 @@
 
 ![Image not found](https://raw.githubusercontent.com/wiki/Electroblob77/Wizardry/en_gb/images/banners/art_banner.png)
 
-Source code for Electroblob's Wizardry, a Minecraft mod currently for versions 1.7.10, 1.10.2, 1.11.2, and 1.12.2. Wizardry adds an RPG-style system of magic spells to Minecraft with the aim of being as playable as possible. No crazy constructs, no perk trees, no complex recipes - simply find spell books, cast spells, and master the arcane!
+Tweaked version of EBW for my own personal modpack.
+Planned changes:
+* Remove durability from wands
+* Merge in Player Mana
+* Allow inventory key to exit arcane workbench GUI
+* Remove flowers, crystals, and ore, among others
+* Many changes to default config, including disabling of most structures
+* Lower mana, higher damage by default
+* Give wizards unique voicelines instead of villager sounds
+* Fix cast command only taking 2 parameters
+* Fix cast command using up and requiring player mana
+* Tinkers Construct-like approach to wand crafting; the core, cap, and handle can remember different parts, and be swapped out at an arcane workbench
+
+
+Source code for Electroblob's Wizardry, a Minecraft mod currently for version 1.12.2. Wizardry adds an RPG-style system of magic spells to Minecraft with the aim of being as playable as possible. No crazy constructs, no perk trees, no complex recipes - simply find spell books, cast spells, and master the arcane!
 
 Please read the [guide for contributing](CONTRIBUTING.md) before submitting an issue or a PR.
 
