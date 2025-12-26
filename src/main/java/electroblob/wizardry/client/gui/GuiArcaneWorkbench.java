@@ -515,18 +515,13 @@ public class GuiArcaneWorkbench extends GuiContainer {
 	@Override
 	protected void keyTyped(char typedChar, int keyCode) throws IOException {
 
-        // Allow exiting the GUI by pressing the inventory button
-        if(keyCode == Minecraft.getMinecraft().gameSettings.keyBindInventory.getKeyCode()) {
-            mc.displayGuiScreen(null);
-            mc.setIngameFocus();
-        }
-
-		if(this.searchNeedsClearing){
+        if(this.searchNeedsClearing){
             this.searchNeedsClearing = false;
 			this.searchField.setText("");
 		}
 
-		if(this.searchField.textboxKeyTyped(typedChar, keyCode)){
+        // Allow exiting the GUI by pressing the inventory button. Does not work if bookshelves are present,
+		if(this.searchField.getVisible() && this.searchField.textboxKeyTyped(typedChar, keyCode)){
 			arcaneWorkbenchContainer.setSearchText(searchField.getText().toLowerCase(Locale.ROOT));
 		}else{
 			super.keyTyped(typedChar, keyCode);
